@@ -87,6 +87,46 @@ class HomeActivity extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Notifications"),
         ],
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero, // Removes default padding
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(color: Colors.red     ), // Optional background color
+              child: Align(
+                alignment: Alignment.bottomLeft, // Aligns text at the bottom left
+                child: Text(
+                  "Flutter App",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: (){
+                myMessage("home app", context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.shopping_cart),
+              title: Text("Order"),
+            ),
+            ListTile(
+              leading: Icon(Icons.location_on),
+              title: Text("Address"),
+            ),
+            ListTile(
+              leading: Icon(Icons.help),
+              title: Text("Help"),
+            ),
+            ListTile(
+              leading: Icon(Icons.contact_mail),
+              title: Text("Contact Us"),
+            ),
+          ],
+        ),
+      ),
 
     );
   }
