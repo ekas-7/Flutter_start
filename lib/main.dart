@@ -70,6 +70,24 @@ class HomeActivity extends StatelessWidget {
           myMessage("This is the Floating Action Button", context);
         },
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        onTap: (int index) {
+          if (index == 0) {
+            myMessage("This is Home Page", context);
+          } else if (index == 1) {
+            myMessage("This is Cart Page", context);
+          } else if (index == 2) {
+            myMessage("This is Notifications Page", context);
+          }
+        },
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.add_box), label: "Cart"),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: "Notifications"),
+        ],
+      ),
+
     );
   }
 }
