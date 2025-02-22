@@ -56,6 +56,20 @@ class HomeActivity extends StatelessWidget {
           ),
         ],
       ),
+      body: const Center(
+        child: Text(
+          "Welcome to Grocery Store",
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        elevation: 15,
+        backgroundColor: Colors.redAccent,
+        child: const Icon(Icons.add_circle),
+        onPressed: () {
+          myMessage("This is the Floating Action Button", context);
+        },
+      ),
     );
   }
 }
